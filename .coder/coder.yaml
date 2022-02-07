@@ -6,13 +6,13 @@ workspace:
   specs:
     kubernetes:
       cpu:
-        value: 1
+        value: 4
       image:
-        value: your-username/your-project:latest # Rename to the same as your image
+        value: kdvolder/tap-coder-demo:latest # Rename to the same as your image
       container-based-vm: 
         value: false
       memory: 
-        value: 1
+        value: 4
       disk: 
         value: 10
   configure:
@@ -20,8 +20,8 @@ workspace:
       value: 
         - name: "Clone the git repository, if it doesn't exist"
           env:
-            GIT_REMOTE: https://github.com/bpmct/coder-project-template.git
-            CLONE_TO: /home/coder/coder-project-template
+            GIT_REMOTE: https://github.com/kdvolder/try-coder.git
+            CLONE_TO: /home/coder/try-coder
           command: |
             # Check if the project directory already exists 
             if [ ! -d $CLONE_TO ]; then
