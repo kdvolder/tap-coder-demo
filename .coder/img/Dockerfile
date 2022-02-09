@@ -30,5 +30,5 @@ RUN pushd /tmp && \
     popd
 
 # apt packages
-RUN apt-get update && apt-get install -y \
-  jq
+RUN sudo apt-get update && \
+    sudo apt-get install -y jq
