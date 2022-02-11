@@ -43,7 +43,6 @@ workspace:
             PROJECT_FOLDER: /home/coder
         - name: "Hookin template/personalize -> personalize"
           command: |
-            set -euo pipefail
             cd ~
             if grep -q "tap-coder-demo" personalize; then
                 echo "template personalizations already hooked"
