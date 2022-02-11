@@ -49,6 +49,7 @@ workspace:
             else
                 echo "Hooking template specific personalizations..."
                 echo "../tap-coder-demo/personalize.sh" >> personalize
+            fi
   dev-urls:
     value:
       - name: web
