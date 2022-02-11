@@ -20,7 +20,7 @@ workspace:
       value: 
         - name: "Clone the git repository, if it doesn't exist"
           env:
-            GIT_REMOTE: https://github.com/kdvolder/tap-coder-demo.git
+            GIT_REMOTE: git@github.com:kdvolder/tap-coder-demo.git
             CLONE_TO: /home/coder/tap-coder-demo
           command: |
             # Check if the project directory already exists 
