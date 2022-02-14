@@ -54,3 +54,7 @@ echo >~/.aws/config <<EOF
 region=us-west-1
 output=json
 EOF
+
+echo "---------------------------------------------"
+echo "---- END tap-coder-demo-personalizations ----"
+echo "---------------------------------------------"

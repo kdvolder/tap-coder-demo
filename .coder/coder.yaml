@@ -43,7 +43,7 @@ workspace:
             PROJECT_FOLDER: /home/coder
         - name: "Install custom personalize script"
           command: |
-            rm -fr ~/.personalize
+            rm -fr ~/personalize
             ln -s /home/coder/tap-coder-demo/.coder/personalize ~/personalize
   dev-urls:
     value:
