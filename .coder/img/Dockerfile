@@ -34,6 +34,7 @@ RUN sudo apt-get update && \
     sudo apt-get install -y jq gettext-base
 
 # Carvell tools
-RUN wget -O- https://carvel.dev/install.sh > /tmp/install.sh && \
-    sudo bash install.sh \
+RUN wget -O /tmp/install.sh https://carvel.dev/install.sh && \
+    sudo bash /tmp/install.sh && \
+    rm -fr /tmp/install.sh && \
     ytt version
