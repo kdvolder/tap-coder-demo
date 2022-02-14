@@ -4,6 +4,8 @@ echo "-----------------------------------------"
 echo "---- tap-coder-demo-personalizations ----"
 echo "-----------------------------------------"
 
+echo "CODER_WORKSPACE_NAME = $CODER_WORKSPACE_NAME"
+
 cd ~/tap-coder-demo/eks
 ./configure-aws-secrets.sh
 
