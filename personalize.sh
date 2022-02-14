@@ -4,14 +4,10 @@ echo "-----------------------------------------"
 echo "---- tap-coder-demo-personalizations ----"
 echo "-----------------------------------------"
 
-if [ -z "$CG_CLIENT_ID" ]; then 
-    echo "CG_CLIENT_ID env var must be provided. Please add it to your .profile in your 'dotfiles' repo".
-    exit 99
-fi
-
-if [ -z "$CG_CLIENT_ID" ]; then 
-    echo "CG_CLIENT_SECRET env var must be provided. Please add it to your .profile in your 'dotfiles' repo".
-    exit 99
+if [ -f ~/.cg_secrets.sh ]; then
+    source ~/.cg_secrets.sh
+else
+    echo 'Please add ~/.cg_secrets to your dotfiles and use it to define CG_CLIENT_ID and CG_CLIENT_SECRET'
 fi
 
 echo "Cloudgate Client ID:     $CG_CLIENT_ID"
