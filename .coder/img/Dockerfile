@@ -31,4 +31,4 @@ RUN pushd /tmp && \
 
 # apt packages
 RUN sudo apt-get update && \
-    sudo apt-get install -y jq
+    sudo apt-get install -y jq gettext-base
