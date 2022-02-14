@@ -8,6 +8,7 @@ echo "CODER_WORKSPACE_NAME = $CODER_WORKSPACE_NAME"
 
 cd ~/tap-coder-demo/eks
 ./configure-aws-secrets.sh
+./eks-cluster-create.sh
 
 # echo >~/.aws/config <<EOF
 # [default]
