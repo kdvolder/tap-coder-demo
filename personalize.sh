@@ -10,6 +10,9 @@ cd ~/tap-coder-demo/eks
 ./configure-aws-secrets.sh
 ./eks-cluster-create.sh
 
+cd ~/tap-coder-demo/tap-install
+./install-tap.sh
+
 # echo >~/.aws/config <<EOF
 # [default]
 # region=us-west-1
