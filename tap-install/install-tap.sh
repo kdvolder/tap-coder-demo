@@ -24,7 +24,7 @@ export REGISTRY_REPO=app-live-view/test
 export REGISTRY_USER=${TANZUNET_USER}
 export REGISTRY_PASSWORD=${TANZUNET_PASSWORD}
 export REGISTRY=${REGISTRY_SERVER}/${REGISTRY_REPO}
-export DOMAIN=appliveview.ga  # Needs to be a domain that you controll and can create DNS records for.
+export DOMAIN=tanzu.ga  # Needs to be a domain that you controll and can create DNS records for.
 
 workdir=$(pwd)
 
