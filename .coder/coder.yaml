@@ -37,6 +37,15 @@ workspace:
             else
               echo "$CLONE_TO exists ✅"
             fi
+        - name: "Clone petclinic for development"
+          env:
+            GIT_REMOTE: git@github.com:kdvolder/tap-coder-demo.git
+            CLONE_TO: /home/coder/tap-coder-demo
+          command: |
+            # Check if the project directory already exists 
+            if [ ! -d $CLONE_TO ]; then
+              git clone $GIT_REMOTE $CLONE_TO
+            fi
         - name: "Set default folder"
           command: curl https://gist.githubusercontent.com/bpmct/b48b99007284444eea94fe9e96d4a329/raw/set_first_dir.sh | sh
           env:
@@ -47,8 +56,8 @@ workspace:
             ln -s /home/coder/tap-coder-demo/.coder/personalize ~/personalize
   dev-urls:
     value:
-      - name: web
-        port: 8000
+      - name: petclinic
+        port: 8080
         scheme: http
         access: private
 
