@@ -6,8 +6,8 @@ FROM codercom/enterprise-base:ubuntu
 # Install programs
 
 # tanzu cli
-COPY --chown=1000:1000 tanzu /home/coder/tanzu
-RUN pushd /home/coder/tanzu && \
+COPY --chown=1000:1000 tanzu /home/tanzu
+RUN pushd /home/tanzu && \
     ./install-tanzu-cli.sh && \
     popd
 
