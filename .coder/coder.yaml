@@ -56,7 +56,7 @@ workspace:
             ln -s /home/coder/tap-coder-demo/.coder/personalize ~/personalize
   dev-urls:
     value:
-      - name: petclinic
+      - name: localhost-8080
         port: 8080
         scheme: http
         access: private
