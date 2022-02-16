@@ -39,8 +39,8 @@ workspace:
             fi
         - name: "Clone petclinic for development"
           env:
-            GIT_REMOTE: git@github.com:kdvolder/tap-coder-demo.git
-            CLONE_TO: /home/coder/tap-coder-demo
+            GIT_REMOTE: git@github.com:kdvolder/spring-petclinic.git
+            CLONE_TO: /home/coder/spring-petclinic
           command: |
             # Check if the project directory already exists 
             if [ ! -d $CLONE_TO ]; then
