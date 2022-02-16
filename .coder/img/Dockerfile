@@ -38,3 +38,7 @@ RUN wget -O /tmp/install.sh https://carvel.dev/install.sh && \
     sudo bash /tmp/install.sh && \
     rm -fr /tmp/install.sh && \
     ytt version
+
+# kp CLI
+RUN sudo curl -L https://github.com/vmware-tanzu/kpack-cli/releases/download/v0.4.2/kp-linux-0.4.2 -o /usr/local/bin/kp && \
+    sudo chmod a+x /usr/local/bin/kp
