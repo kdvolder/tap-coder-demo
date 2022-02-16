@@ -29,7 +29,7 @@ export DOMAIN=tanzu.ga  # Needs to be a domain that you controll and can create 
 workdir=$(pwd)
 
 ./01-prereqs.sh
-#./02-tap-install-profile.sh
+./02-tap-install-profile.sh
 #./03-alv-carvel.sh
 #     # alternatively: 02-alv-tap.sh
 #./04-pstar-from-source.sh
