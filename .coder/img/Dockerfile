@@ -31,7 +31,7 @@ RUN pushd /tmp && \
 
 # apt packages
 RUN sudo apt-get update && \
-    sudo apt-get install -y jq gettext-base
+    sudo apt-get install -y jq gettext-base openjdk-11-jdk
 
 # Carvell tools
 RUN wget -O /tmp/install.sh https://carvel.dev/install.sh && \
