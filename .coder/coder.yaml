@@ -58,6 +58,10 @@ workspace:
             for e in $extensions; do
               SERVICE_URL=https://open-vsx.org/vscode/gallery ITEM_URL=https://open-vsx.org/vscode/item /var/tmp/coder/code-server/bin/code-server --install-extension "$e"
             done
+        - name: "Configure tanzu cli plugins"
+          command: |
+            cd /home/tanzu
+            tanzu plugin install --local cli all
         - name: "Install custom personalize script"
           command: |
             rm -fr ~/personalize
