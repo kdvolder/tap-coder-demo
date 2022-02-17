@@ -1,0 +1,2 @@
+#!/bin/bash
+tanzu apps workload tail $1 --since 10m --timestamp

@@ -11,6 +11,9 @@ RUN pushd /home/tanzu && \
     ./install-tanzu-cli.sh && \
     popd
 
+# Add a 'alias' tlog command for hard to remember tanzu cli command to tail workload log output
+COPY bin/tlog /usr/local/bin/tlog
+
 # aws eksctl
 RUN curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp && \
     sudo mv /tmp/eksctl /usr/local/bin
