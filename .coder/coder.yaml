@@ -50,6 +50,15 @@ workspace:
           command: curl https://gist.githubusercontent.com/bpmct/b48b99007284444eea94fe9e96d4a329/raw/set_first_dir.sh | sh
           env:
             PROJECT_FOLDER: /home/coder
+        - name: "Install some vscode extensions we like"
+          command: |
+            extensions=\
+                ms-kubernetes-tools.vscode-kubernetes-tools \
+                vscjava.vscode-java-pack \
+                pivotal.vscode-spring-boot
+            for e in $extensions; do
+              SERVICE_URL=https://open-vsx.org/vscode/gallery ITEM_URL=https://open-vsx.org/vscode/item /var/tmp/coder/code-server/bin/code-server --install-extension "$e"
+            done
         - name: "Install custom personalize script"
           command: |
             rm -fr ~/personalize
