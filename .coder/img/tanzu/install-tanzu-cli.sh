@@ -1,6 +1,7 @@
 #/bin/bash
+set -euo pipefail
 cat tanzu-cli.tar.gz.part* | tar zxv
-#rm -fr tanzu-cli.tar.gz.part*
+rm -fr tanzu-cli.tar.gz.part*
 pushd cli/core
     tanzu_binary=$(find  -name tanzu-core-linux_amd64)
     sudo install $tanzu_binary /usr/local/bin/tanzu
