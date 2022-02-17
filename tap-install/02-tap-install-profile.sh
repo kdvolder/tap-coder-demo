@@ -37,8 +37,11 @@ buildservice:
   tanzunet_username: "${TANZUNET_USER}"
   tanzunet_password: "${TANZUNET_PASSWORD}"
 
-supply_chain: basic
+cnrs:
+  domain_name: ${DOMAIN}
 
+supply_chain: basic
+  
 ootb_supply_chain_basic:
   registry:
     server: "${REGISTRY_SERVER}"
@@ -111,13 +114,5 @@ metadata:
   namespace: knative-serving
 data:
   enable-scale-to-zero: "false"
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: config-domain
-  namespace: knative-serving
-data:
-  ${DOMAIN}: ""
 EOF
 kubectl apply -f tmp/knative-config.yaml
