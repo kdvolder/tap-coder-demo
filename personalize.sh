@@ -1,4 +1,11 @@
 #!/bin/bash
+
+#
+# This script will be called:
+#  - when the coder workspace is built or re-built
+#  - every time the coder workspace is started
+# It is executed at the very end of workspace setup.
+
 set -euo pipefail
 echo "-----------------------------------------"
 echo "---- tap-coder-demo-personalizations ----"
