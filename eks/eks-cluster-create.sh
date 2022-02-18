@@ -2,7 +2,7 @@
 set -euo pipefail
 
 region=us-west-1
-cluster_name=${CODER_WORKSPACE_NAME}-cluster
+cluster_name=shared-tap-coder-cluster
 
 if eksctl get cluster --name "$cluster_name" --region $region ; then
     echo "EKS Cluster exists, skip creation"

@@ -100,8 +100,6 @@ tanzu secret registry add registry-credentials \
   --namespace default
 # export-to-all-namespaces option should not be needed but is a bug workaround
 
-kubectl apply -n default -f default-namespace-knative-enablement.yaml
-
 ########################################################################################
 ### Extra stuff added by kdvolder
 
