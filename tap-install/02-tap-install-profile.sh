@@ -2,7 +2,7 @@
 
 set -euox pipefail
 
-readonly TAP_REPO_VERSION=1.0.2-build.2
+readonly TAP_REPO_VERSION=1.0.2-build.3
 
 # https://docs-staging.vmware.com/en/Tanzu-Application-Platform/0.4/tap/GUID-install.html
 # This script requires:
