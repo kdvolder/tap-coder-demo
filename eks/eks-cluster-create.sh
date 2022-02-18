@@ -2,7 +2,7 @@
 set -euo pipefail
 
 region=us-west-1
-cluster_name=shared-tap-coder-cluster
+cluster_name=shared-coder-cluster
 
 aws configure set default.region $region
 
