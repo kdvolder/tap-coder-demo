@@ -88,18 +88,6 @@ EOF
 TAP_VERSION=$(tanzu package available list tap.tanzu.vmware.com --namespace tap-install | tail -n 1 | tr -s ' ' | cut -d" " -f3)
 tanzu package install tap -p tap.tanzu.vmware.com -v ${TAP_VERSION} --values-file tmp/tap-values.yaml -n tap-install
 
-#####################################################################################
-# Set up 'default' as a developer namespace
-# https://docs-staging.vmware.com/en/Tanzu-Application-Platform/0.4/tap/GUID-install-components.html#set-up-developer-namespaces-to-use-installed-packages-42
-
-tanzu secret registry add registry-credentials \
-  --username ${REGISTRY_USER} \
-  --password ${REGISTRY_PASSWORD} \
-  --server ${REGISTRY_SERVER} \
-  --export-to-all-namespaces --yes \
-  --namespace default
-# export-to-all-namespaces option should not be needed but is a bug workaround
-
 ########################################################################################
 ### Extra stuff added by kdvolder
 

@@ -28,8 +28,13 @@ export DOMAIN=tanzu.ga  # Needs to be a domain that you controll and can create 
 
 workdir=$(pwd)
 
-./01-prereqs.sh
-./02-tap-install-profile.sh
+if kubectl get namespace tap-install > /dev/null 2>&1; then
+    echo "Skipping tap installation (already installed)"
+else
+    echo "Installing tap into the cluster..."
+    ./01-prereqs.sh
+    ./02-tap-install-profile.sh
+fi
 ./03-setup-dev-namespace.sh
 ./04-create-workloads.sh
 #./03-alv-carvel.sh
