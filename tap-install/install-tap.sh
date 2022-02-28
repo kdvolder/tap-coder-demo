@@ -32,8 +32,8 @@ if kubectl get namespace tap-install > /dev/null 2>&1; then
     echo "Skipping tap installation (already installed)"
 else
     echo "Installing tap into the cluster..."
-    ./01-prereqs.sh
-    ./02-tap-install-profile.sh
+    time ./01-prereqs.sh
+    time ./02-tap-install-profile.sh
 fi
 ./03-setup-dev-namespace.sh
 ./04-create-workloads.sh
